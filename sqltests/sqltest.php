@@ -8,8 +8,8 @@ catch (PDOException $e) {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
 if (isset($_POST['delete']) && isset($_POST['isbn'])) {
-    $isbn = get_post('isbn');
-    $query = "DELETE FROM publications WHERE isbn = $isbn";
+    $isbn = get_post($pdo, 'isbn');
+    $query = "DELETE FROM classics WHERE isbn = $isbn";
     $result = $pdo->query($query);
 }
 if (isset($_POST['author']) && isset($_POST['title'])
