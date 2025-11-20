@@ -1,5 +1,5 @@
 <?php
-require_once 'login.php';
+require_once '\Program Files\Ampps\www\login.php';
 
 try {
     $pdo = new PDO($attr, $user, $pass, $opts);
